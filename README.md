@@ -2,7 +2,7 @@
 
 ## TEAM-MEMBERS
     Shyam Sgothia       19BECE30186  (Lead)  
-    Heet PAtel          19BECE30528  
+    Heet Patel          19BECE30528  
     Yash Desai          19BECE30218  
     Bhautik Sakhiya     19BECE30506  
 
