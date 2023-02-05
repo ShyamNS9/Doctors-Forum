@@ -1,0 +1,390 @@
+{% extends "./layout.html" %}
+{% block head_content %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
+          rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static',filename='homepage/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='homepage/assets/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='homepage/assets/css/templatemo-seo-dream.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='homepage/assets/css/animated.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='homepage/assets/css/owl.css') }}">
+    <style id="__web-inspector-hide-shortcut-style__">
+        .__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after {
+            visibility: hidden !important;
+        }
+    </style>
+    <style>
+        #tt-pageContent.tt-offset-small {
+            padding-top: 80px;
+        }
+    </style>
+{% endblock head_content %}
+{% block body_temp %}
+    <div id="js-preloader" class="js-preloader loaded">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+{% endblock body_temp %}
+{% block main_content %}
+    <div class="main-banner wow fadeIn animated" id="top" data-wow-duration="1s" data-wow-delay="0.5s"
+         style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.5s; -moz-animation-delay: 0.5s; animation-delay: 0.5s;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-6 align-self-center">
+                            <div class="left-content header-text wow fadeInLeft animated" data-wow-duration="1s"
+                                 data-wow-delay="1s"
+                                 style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 1s; -moz-animation-delay: 1s; animation-delay: 1s;">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h2>Doctors' Community & Forum</h2>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="main-green-button scroll-to-section">
+                                            <a href="{{ url_for('forum_urls.index_page') }}">Go to Forum</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="right-image wow fadeInRight animated" data-wow-duration="1s"
+                                 data-wow-delay="0.5s"
+                                 style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.5s; -moz-animation-delay: 0.5s; animation-delay: 0.5s;">
+                                <img src="{{ url_for('static',filename='homepage/assets/images/banner-right-image.png') }}"
+                                     alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="features" class="features section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="features-content">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="features-item first-feature wow fadeInUp animated" data-wow-duration="1s"
+                                     data-wow-delay="0s"
+                                     style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0s; -moz-animation-delay: 0s; animation-delay: 0s;">
+                                    <div class="first-number number">
+                                        <h6>01</h6>
+                                    </div>
+                                    <div class="icon"></div>
+                                    <h4>FORUM</h4>
+                                    <div class="line-dec"></div>
+                                    <p>Doctors' Forum is a community of creatives who come together to share ideas and
+                                        help each other succeed.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="features-item second-feature wow fadeInUp animated" data-wow-duration="1s"
+                                     data-wow-delay="0.2s"
+                                     style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                                    <div class="second-number number">
+                                        <h6>02</h6>
+                                    </div>
+                                    <div class="icon"></div>
+                                    <h4>Blogs</h4>
+                                    <div class="line-dec"></div>
+                                    <p>Come to the platform to give your thoughts and experience via creating blogs.</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="features-item first-feature wow fadeInUp animated" data-wow-duration="1s"
+                                     data-wow-delay="0.4s"
+                                     style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;">
+                                    <div class="third-number number">
+                                        <h6>03</h6>
+                                    </div>
+                                    <div class="icon"></div>
+                                    <h4>Q & A</h4>
+                                    <div class="line-dec"></div>
+                                    <p>If you are a doctor and having some doubts it's the perfect community for you to
+                                        get all your questions answered.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="features-item second-feature last-features-item wow fadeInUp animated"
+                                     data-wow-duration="1s" data-wow-delay="0.6s"
+                                     style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
+                                    <div class="fourth-number number">
+                                        <h6>04</h6>
+                                    </div>
+                                    <div class="icon"></div>
+                                    <h4>Community</h4>
+                                    <div class="line-dec"></div>
+                                    <p>It's always good to have a back support of the pears near you and keep yourself
+                                        updated.</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="skills-content">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="skill-item wow fadeIn animated" data-wow-duration="1s" data-wow-delay="0s"
+                                     style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0s; -moz-animation-delay: 0s; animation-delay: 0s;">
+                                    <div class="progress" data-percentage="80">
+                    <span class="progress-left">
+                      <span class="progress-bar"></span>
+                    </span>
+                                        <span class="progress-right">
+                      <span class="progress-bar"></span>
+                    </span>
+                                        <div class="progress-value">
+                                            <div>
+                                                80%<br>
+                                                <span>Doubts got</span>
+                                                <span>answered</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="skill-item wow fadeIn animated" data-wow-duration="1s" data-wow-delay="0.2s"
+                                     style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                                    <div class="progress" data-percentage="70">
+                    <span class="progress-left">
+                      <span class="progress-bar"></span>
+                    </span>
+                                        <span class="progress-right">
+                      <span class="progress-bar"></span>
+                    </span>
+                                        <div class="progress-value">
+                                            <div>
+                                                70%<br>
+                                                <span>Engagement</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="skill-item wow fadeIn animated" data-wow-duration="1s" data-wow-delay="0.4s"
+                                     style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;">
+                                    <div class="progress" data-percentage="90">
+                    <span class="progress-left">
+                      <span class="progress-bar"></span>
+                    </span>
+                                        <span class="progress-right">
+                      <span class="progress-bar"></span>
+                    </span>
+                                        <div class="progress-value">
+                                            <div>
+                                                90%<br>
+                                                <span>Reach</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="skill-item last-skill-item wow fadeIn animated" data-wow-duration="1s"
+                                     data-wow-delay="0.6s"
+                                     style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">
+                                    <div class="progress" data-percentage="80">
+                    <span class="progress-left">
+                      <span class="progress-bar"></span>
+                    </span>
+                                        <span class="progress-right">
+                      <span class="progress-bar"></span>
+                    </span>
+                                        <div class="progress-value">
+                                            <div>
+                                                80%<br>
+                                                <span>User-Friendly</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="about-us section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-image wow fadeInLeft animated" data-wow-duration="1s" data-wow-delay="0.5s"
+                         style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.5s; -moz-animation-delay: 0.5s; animation-delay: 0.5s;">
+                        <img src="{{ url_for('static',filename='') }}homepage/assets/images/about-left-image.png"
+                             alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center wow fadeInRight animated" data-wow-duration="1s"
+                     data-wow-delay="0.5s"
+                     style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.5s; -moz-animation-delay: 0.5s; animation-delay: 0.5s;">
+                    <div class="section-heading">
+                        <h6>About Us</h6>
+                        <h2>One of a <em>KIND</em> community existing on the internet!! Come <span>Join Us</span>!!</h2>
+                    </div>
+
+                    <p>In today’s world we see lots of development happening in the field of Technology and the world
+                        revolves around technology. Now, using search engines to have a source of information had become
+                        very common but, it’s not always possible to get certain information that you had in your mind
+                        to be available at your fingertips until and unless there is someone there to answer it by his
+                        knowledge or had already experienced it in the past.</p>
+                    <div class="main-green-button"><a href="{{ url_for('forum_urls.index_page') }}">Community Forum</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services" class="our-services section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading wow bounceIn animated" data-wow-duration="1s" data-wow-delay="0.2s"
+                         style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                        <h6>Our Services</h6>
+                        <h2>Discover What We Do &amp; <span>Offer</span> To Our <em>Users</em></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="service-item wow bounceInUp animated" data-wow-duration="1s" data-wow-delay="0.3s"
+                     style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="icon">
+                                <img src="{{ url_for('static',filename='homepage/assets/images/service-icon-01.png') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="right-content">
+                                <h4>Simple Websites</h4>
+                                <p>The website is very much user-friendly to use.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="service-item wow bounceInUp animated" data-wow-duration="1s" data-wow-delay="0.4s"
+                     style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="icon">
+                                <img src="{{ url_for('static',filename='homepage/assets/images/service-icon-02.png') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="right-content">
+                                <h4>Secure Backend</h4>
+                                <p>All the confidential data is encrypted in the backend. so, it's safe!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="service-item wow bounceInUp animated" data-wow-duration="1s" data-wow-delay="0.5s"
+                     style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.5s; -moz-animation-delay: 0.5s; animation-delay: 0.5s;">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="icon">
+                                <img src="{{ url_for('static',filename='homepage/assets/images/service-icon-03.png') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="right-content">
+                                <h4>Traffic Management</h4>
+                                <p>Traffic is well maintained throughout the internet, so you get the seamless experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    {#        <div class="col-lg-4">#}
+    {#          <div class="service-item wow bounceInUp animated" data-wow-duration="1s" data-wow-delay="0.6s" style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.6s; -moz-animation-delay: 0.6s; animation-delay: 0.6s;">#}
+    {#            <div class="row">#}
+    {#              <div class="col-lg-4">#}
+    {#                <div class="icon">#}
+    {#                  <img src="{{ url_for('static',filename='homepage/assets/images/service-icon-03.png') }}" alt="">#}
+    {#                </div>#}
+    {#              </div>#}
+    {#              <div class="col-lg-8">#}
+    {#                <div class="right-content">#}
+    {#                  <h4>Optimizing Keywords</h4>#}
+    {#                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dormque laudantium.</p>#}
+    {#                </div>#}
+    {#              </div>#}
+    {#            </div>#}
+    {#          </div>#}
+    {#        </div>#}
+    {#        <div class="col-lg-4">#}
+    {#          <div class="service-item wow bounceInUp animated" data-wow-duration="1s" data-wow-delay="0.7s" style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.7s; -moz-animation-delay: 0.7s; animation-delay: 0.7s;">#}
+    {#            <div class="row">#}
+    {#              <div class="col-lg-4">#}
+    {#                <div class="icon">#}
+    {#                  <img src="{{ url_for('static',filename='homepage/assets/images/service-icon-01.png') }}" alt="">#}
+    {#                </div>#}
+    {#              </div>#}
+    {#              <div class="col-lg-8">#}
+    {#                <div class="right-content">#}
+    {#                  <h4>Page Optimizations</h4>#}
+    {#                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dormque laudantium.</p>#}
+    {#                </div>#}
+    {#              </div>#}
+    {#            </div>#}
+    {#          </div>#}
+    {#        </div>#}
+    {#        <div class="col-lg-4">#}
+    {#          <div class="service-item wow bounceInUp animated" data-wow-duration="1s" data-wow-delay="0.8s" style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.8s; -moz-animation-delay: 0.8s; animation-delay: 0.8s;">#}
+    {#            <div class="row">#}
+    {#              <div class="col-lg-4">#}
+    {#                <div class="icon">#}
+    {#                  <img src="{{ url_for('static',filename='homepage/assets/images/service-icon-02.png') }}" alt="">#}
+    {#                </div>#}
+    {#              </div>#}
+    {#              <div class="col-lg-8">#}
+    {#                <div class="right-content">#}
+    {#                  <h4>Deep URL Analysis</h4>#}
+    {#                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dormque laudantium.</p>#}
+    {#                </div>#}
+    {#              </div>#}
+    {#            </div>#}
+    {#          </div>#}
+    {#        </div>#}
+    {#      </div>#}
+        </div>
+    </div>
+{% endblock main_content %}
+{% block script_content %}
+    <script src="{{ url_for('static',filename='homepage/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='homepage/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='homepage/assets/js/owl-carousel.js') }}"></script>
+    <script src="{{ url_for('static',filename='homepage/assets/js/animation.js') }}"></script>
+    <script src="{{ url_for('static',filename='homepage/assets/js/imagesloaded.js') }}"></script>
+    <script src="{{ url_for('static',filename='homepage/assets/js/custom.js') }}"></script>
+{% endblock script_content %}

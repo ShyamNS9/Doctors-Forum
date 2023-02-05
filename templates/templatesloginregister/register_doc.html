@@ -1,0 +1,77 @@
+{% extends "./layout.html" %}
+{% block head_content %}
+<link rel="stylesheet" href="{{ url_for('static',filename='main.css')}}">
+    <style>
+        body{
+            overflow: hidden;
+        }
+    </style>
+{% endblock head_content %}
+
+{% block main_content %}
+    <form class="lr_center_box"  method="post" action="">
+            <div class="login_form_left_side">
+                <div class="form_htag_div_register">
+                    <h1>REGISTER</h1>
+                </div>
+                <div class="form_content_register">
+                    {{ validation_form.hidden_tag() }}
+                    {{ validation_form.username.label(class='form_label') }}
+                    {{ validation_form.username(class='btn_input_common form_input_tag') }}
+                    {{ validation_form.email.label(class='form_label') }}
+                    {{ validation_form.email(class='btn_input_common form_input_tag') }}
+                    {{ validation_form.password1.label(class='form_label') }}
+                    {{ validation_form.password1(class='btn_input_common form_input_tag') }}
+                    {{ validation_form.password2.label(class='form_label') }}
+                    {{ validation_form.password2(class='btn_input_common form_input_tag') }}
+                    <button type="button" onclick="counter()" class="btn_input_common btn_form_change">
+                        Validate Yourself as a Doctor
+                    </button>
+    {#                {{ register_form.submit(class='btn_input_common btn_form') }}#}
+                    <p>Already have an account?<a href="{{ url_for('login_main') }}">LOGIN</a></p>
+                </div>
+            </div>
+            <div class="lr_content_box content_right" id="popup1">
+                <img class="bc-demo" src="{{ url_for('static',filename='Doctor_register.png')}}" alt="Back art">
+                <div class="form_content_div">
+                    <p style="font-size: 0.9vw; padding: 0.9vmin; word-spacing: -0.1vmin">
+                        Register yourself to the most awaited community on the internet!
+                    </p>
+                </div>
+            </div>
+            <div class="login_form_right_side popup2" id="popup2">
+                <div class="form_htag_div_register">
+                    <h3>**Enter the details as per your MCI Certificate</h3>
+                </div>
+                <div class="form_content_register">
+                    {{ validation_form.hidden_tag() }}
+                    {{ validation_form.name_as_per_mci.label(class='form_label') }}
+                    {{ validation_form.name_as_per_mci(class='btn_input_common form_input_tag') }}
+                    {{ validation_form.dropdown_select1.label(class='form_label') }}
+                    {{ validation_form.dropdown_select1(class='btn_input_common form_input_tag') }}
+                    {{ validation_form.dropdown_select2.label(class='form_label') }}
+                    {{ validation_form.dropdown_select2(class='btn_input_common form_input_tag') }}
+                    {{ validation_form.registration_number.label(class='form_label') }}
+                    {{ validation_form.registration_number(class='btn_input_common form_input_tag') }}
+                    {{ validation_form.submit(class='btn_input_common btn_form') }}
+                    <p style="color: #ff1f00">*It might take 15-20 seconds to validate your details with MCI database! So, have patients.</p>
+                </div>
+            </div>
+        </form>
+{% endblock main_content %}
+{% block script_content %}
+    <script>
+        let count_popup = 1;
+        function counter(){
+            if (count_popup%2 === 0){
+                document.getElementById('popup2').style.display = "none";
+                document.getElementById('popup1').style.display = "flex";
+            }
+            else {
+               document.getElementById('popup1').style.display = "none";
+               document.getElementById('popup2').style.display = "block";
+            }
+            count_popup += 1;
+        }
+    </script>
+{% endblock script_content %}

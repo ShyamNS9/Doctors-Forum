@@ -1,0 +1,40 @@
+{% extends "./layout.html" %}
+{% block head_content %}
+<link rel="stylesheet" href="{{ url_for('static',filename='main.css')}}">
+    <style>
+        body{
+            overflow: hidden;
+        }
+    </style>
+{% endblock head_content %}
+
+{% block main_content %}
+    <div class="lr_center_box">
+            <form class="login_form_left_side" method="post" action="">
+                <div class="form_htag_div_register">
+                    <h1>REGISTER</h1>
+                </div>
+                <div class="form_content_register">
+                    {{ form.hidden_tag() }}
+                    {{ form.username.label(class='form_label') }}
+                    {{ form.username(class='btn_input_common form_input_tag') }}
+                    {{ form.email.label(class='form_label') }}
+                    {{ form.email(class='btn_input_common form_input_tag') }}
+                    {{ form.password1.label(class='form_label') }}
+                    {{ form.password1(class='btn_input_common form_input_tag') }}
+                    {{ form.password2.label(class='form_label') }}
+                    {{ form.password2(class='btn_input_common form_input_tag') }}
+                    {{ form.submit(class='btn_input_common btn_form') }}
+                    <p>Already have an account?<a href="{{ url_for('login_main') }}">LOGIN</a></p>
+                </div>
+            </form>
+            <div class="lr_content_box content_right">
+                <img class="bc-demo" src="{{ url_for('static',filename='User_register.png')}}" alt="Back art">
+                <div class="form_content_div">
+                    <p style="font-size: 0.9vmin; padding: 0.9vmin; word-spacing: -0.1vmin">
+                        Are you a future Dr. or even you are from non medicine background register to medical knowledge world!
+                    </p>
+                </div>
+            </div>
+        </div>
+{% endblock main_content %}

@@ -1,0 +1,37 @@
+{% extends "./layout.html" %}
+{% block head_content %}
+<link rel="stylesheet" href="{{ url_for('static',filename='main.css')}}">
+    <style>
+        body{
+            overflow: hidden;
+        }
+    </style>
+{% endblock head_content %}
+
+{% block main_content %}
+    <div class="lr_center_box">
+            <form class="login_form_left_side" method="post" action="">
+                <div class="form_h1_div">
+                    <h1>LOGIN</h1>
+                </div>
+                <div class="form_content">
+                    {{ form.hidden_tag() }}
+                    {{ form.username.label(class='form_label') }}
+                    {{ form.username(class='btn_input_common form_input_tag') }}
+                    {{ form.password1.label(class='form_label') }}
+                    {{ form.password1(class='btn_input_common form_input_tag') }}
+                    {{ form.submit(class='btn_input_common btn_form') }}
+                    <p>New here?<a href="{{ url_for('register_main') }}">REGISTER</a></p>
+
+                </div>
+            </form>
+            <div class="lr_content_box content_right">
+                <img class="bc-demo" src="{{ url_for('static',filename='User_login.png')}}" alt="Back art" style="margin-left: 0">
+                <div class="form_content_div">
+                    <p style="font-size: 0.9vw; padding: 0.9vmin; word-spacing: -0.1vmin">
+                        Hello! Nice to see you again!!
+                    </p>
+                </div>
+            </div>
+        </div>
+{% endblock main_content %}

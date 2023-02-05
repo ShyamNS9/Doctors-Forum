@@ -1,0 +1,35 @@
+{% extends "./layout.html" %}
+{% block head_content %}
+<link rel="stylesheet" href="{{ url_for('static',filename='main.css')}}">
+    <style>
+        body{
+            overflow: hidden;
+        }
+    </style>
+{% endblock head_content %}
+
+{% block main_content %}
+    <div class="lr_center_box">
+            <div class="lr_content_box content_left">
+                <img style="margin-right: -1.8vw" class="bc-demo for_left" src="{{ url_for('static',filename='User_login_main.png')}}" alt="Back art">
+                <a href="{{ url_for('login_users') }}">
+                    <div style="margin-right: -1.8vw" class="form_content_div">
+                        <p style="line-height: 4vh;">
+                            Login as<br>a <span style="color: #ff7c3c">User</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="lr_content_box content_right">
+                <img style="margin-left: -1.8vw" class="bc-demo" src="{{ url_for('static',filename='Doctor_login_main.png')}}" alt="Back art">
+                <a href="{{ url_for('login_doc') }}">
+                    <div style="margin-left: -1.8vw" class="form_content_div">
+                        <p style="line-height: 4vh;">
+                            Login as<br>a <span style="color: #ff7c3c">Doctor</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+{% endblock main_content %}
